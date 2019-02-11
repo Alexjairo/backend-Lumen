@@ -51,7 +51,7 @@ class airplanesController extends Controller
      }
      function deleteAirplane(Request $request){
       $sql= 'delete from "Airplanes" where :id';
-      $parametres =[$data['id']]
+      $parametres =[$data['id']];
       $response = DB::select($sql, $parameters);
             return response()->json($parametres,201);
           }
