@@ -49,14 +49,14 @@ class airplanesController extends Controller
         $response = DB::select($sql, $parameters);
         return response()->json($parameters,201);
      }
-     function destroyAirplane(Request $request){
-        if($request->isJson()){
-
-           $airplane=App\airplane::detroy($code);
-            return response()->json($airplane,201);
+     function deleteAirplane(Request $request){
+      $sql= 'delete from "Airplanes" where :id'
+      $parametres =[$data['id']]
+      $response = DB::select($sql, $parameters);
+            return response()->json($parametres,201);
           }
        return response()->json(['error'=>'Unauthorized'], 401,[]);
 
       }
 
-}
+
