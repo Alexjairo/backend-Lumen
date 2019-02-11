@@ -54,8 +54,6 @@ class airplanesController extends Controller
       $parametres =[$data['id']];
       $response = DB::select($sql, $parameters);
             return response()->json($parametres,201);
-          }
-       return response()->json(['error'=>'Unauthorized'], 401,[]);
 
       }
 
