@@ -18,7 +18,7 @@ $router->get('/', function () use ($router) {
 $router->get('/airplanes',['uses'=>'airplanesController@index']);
 $router-> post('/airplanes',['uses'=>'airplanesController@createAirplane']);
 $router-> put('/airplanes',['uses'=>'airplanesController@updateAirplane']);
-$router-> delete('/airplanes',['uses'=>'airplanesController@destroyAirplane']);
+$router-> delete('/airplanes',['uses'=>'airplanesController@deleteAirplane']);
 
 // routes seat
 $router->get('/seat',['uses'=>'seatController@index']);
